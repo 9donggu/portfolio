@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "noto sans kr", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+.main {
+  width: 100%;
+
+  position: absolute;
+}
+.mainunder {
+  padding: 0 10%;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.icon {
+  float: right;
+  border: 1px solid red;
+
+  line-height: 150px;
+}
+img.iconimg1,
+img.iconimg2,
+img.iconimg3 {
+  margin-right: 35px;
+  vertical-align: middle;
+  border: 1px solid red;
+}
+img.iconimg1 {
+  height: 25px;
+}
+img.iconimg2 {
+  height: 28px;
+}
+img.iconimg3 {
+  height: 25px;
+}
+.logo {
+  vertical-align: middle;
+  width: 70%;
+}
+.li1,
+.li2,
+.li3,
+.li4,
+.li5 {
+  float: left;
+  margin-left: 70px;
+  padding: 15px;
+}
+
+.sun {
+  display: block;
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+}
+.ulmain2mom {
+  margin-left: 20px;
+  margin-top: 50px;
+  border: 1px solid red;
+  overflow: hidden;
+  float: left;
+}
+.ulmain1 {
+  margin-top: 55px;
+
+  float: left;
+}
+.ulmain2,
+.ulmain3,
+.ulmain4,
+.ulmain5,
+.ulmain6 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 117px;
+  height: 0;
+  background-color: antiquewhite;
+  transition: all 0.7s ease;
+  overflow: hidden;
+}
+.limain2,
+.limain3,
+.limain4,
+.limain5,
+.limain6 {
+  position: absolute;
+  width: 60%;
+  margin: auto;
+  height: 280px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid red;
+}
+.lia {
+  color: green;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 17pt;
+  display: block;
+}
+.lia2 {
+  color: orange;
+  line-height: 70px;
+  font-size: 17pt;
+  font-weight: bold;
+  display: block;
+}
+.lia3 {
+  color: blueviolet;
+  line-height: 70px;
+  font-size: 17pt;
+  font-weight: bold;
+  display: block;
+}
+.lia4 {
+  color: rgb(52, 99, 226);
+  line-height: 93.333px;
+  font-size: 17pt;
+  font-weight: bold;
+  display: block;
+}
+.lia5 {
+  font-size: 17pt;
+  color: rgb(7, 0, 7);
+  line-height: 140px;
+  font-weight: bold;
+  display: block;
+}
+
+.li1:hover > .ulmain2 {
+  height: 350px;
+}
+.li2:hover > .ulmain3 {
+  height: 350px;
+}
+.li3:hover > .ulmain4 {
+  height: 350px;
+}
+.li4:hover > .ulmain5 {
+  height: 350px;
+}
+.li5:hover > .ulmain6 {
+  height: 350px;
+}
+.liunder1:hover > .ulintro {
+  display: block;
+}
+.ulintro {
+  position: absolute;
+  right: 0%;
+  bottom: 10%;
+  display: none;
+  transition: 1s ease;
+}
+.introimg {
+  width: 60%;
+}
+.liunder1 {
+  border: 1px solid red;
+  width: 150px;
+}
+.ulhistory {
+  position: absolute;
+  right: 0%;
+}

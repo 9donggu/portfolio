@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q&A</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 나눔고딕 폰트체 사용 -->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+    <!-- 제이쿼리 최신 코드 연동 -->
+    <script type="text/javascript" src="js/plugin/rolling.js"></script>
+    <!-- 롤링 플러그인 연동 -->
+    <script type="text/javascript" src="js/plugin/jquery-ui.min.js"></script>
+    <!-- 사이드바 플러그인 연동 -->
+    <script type="text/javascript" src="js/plugin/slider.js"></script>
+    <!-- 대슬라이드 플러그인 연동 -->
+    <script
+      type="text/javascript"
+      src="js/plugin/jquery.bxslider.min.js"
+    ></script>
+    <!-- bxslider 플러그인 연동 -->
+  
+    <script type="text/javascript" src="js/sunkist.js"></script>
+    <!-- 메인 제이쿼리 연동 -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        vertical-align: bottom;
+        border: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+      /* 메뉴 시작--------------------- */
+header{
+    
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    border-bottom:1px solid #d1d0d0;
+    z-index: 9999;
+    background-color:#fff;
+  }
+  
+  .headerlogo{
+    float:left;
+    padding:40px 0px;
+    width:13%;
+  }
+  nav{
+    float:left;
+    margin-left:14%;
+    
+    width:60%;
+    
+  }
+  .limain{
+    float:left; 
+    width:16%;
+    
+  }
+  
+  .amain1,
+  .amain2,
+  .amain3,
+  .amain4,
+  .amain5{
+    display:block;
+    line-height: 150px;
+    width:100%;
+    position:relative;
+    color:#000;
+    font-weight:bold;
+    font-size:17pt;
+    text-align:center;
+  }
+  .headermain{
+    position: relative;
+    width:100%;
+    padding:0 7%;
+  }
+  .ulmainitem{
+    position:absolute;
+    border-bottom:1px solid #d1d0d0;
+    background-color: #fff;
+    width:100%;
+    height:500px;
+    top:140px;
+    left:0;
+     display:none;
+  }
+  .limain:hover>.ulmainitem{
+    display:block;
+  }
+  
+  .limainitem{
+    width:86%;
+    
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin:0 auto;
+    height:500px; 
+  }
+  .ulitem{
+    position:absolute;
+    left:0;
+    top:0;
+    
+    
+    z-index: 2;
+  }
+  .sunkistitem,
+  .sunkistitem33,
+  .sunkistitem-gong{
+  
+    position:relative;
+    font-size:14pt;
+    width:130px;
+    display:block;
+    color:#000;
+    font-weight:550;
+    
+    
+   
+  }
+  .sunkistitem:hover,
+  .sunkistitem2:hover,
+  .sunkistitem33:hover,
+  .sunkistitem-gong:hover{
+    font-weight:bold;
+    
+  
+  }
+  .sunkistitem1,
+  .sunkistitem111{
+    width:300px;
+  }
+  .sunkistitem111:hover:after{
+    right:-1%;
+  
+  }
+  header div nav ul li ul li ul li a:after{
+   position:absolute;
+   content:"\003E";
+   font-size:15pt;
+   color:rgb(0, 0, 0);
+   opacity: 0;
+   right:20%;
+   transition:all 0.5s ease-in-out;
+  }
+  .introimga11:after{
+    display:none;
+  }
+  .storyimga:after{
+    display:none;
+  }
+  header div nav ul li ul li ul li a:hover:after{
+  opacity: 1;
+  right:10%;
+  }
+  .liitem,
+  .liitem1,
+  .liitem2,
+  .liitem3,
+  .liitem4,
+  .liitem11,
+  .liitem22,
+  .liitem33,
+  .liitem44{  
+    line-height:65px; 
+    
+  }
+  
+  .sunkistmapimg{
+    position:absolute;
+    left:750%;
+    bottom:-47%;
+    display:none;
+    
+  }
+  .liitem:hover>.sunkistmapimg{
+    display:block;
+  }
+  .orangea:hover{
+    font-weight:bold;
+  }
+  .orangea{
+    color:#000;   
+    width:120px;
+    display:block;  
+    
+  }
+  
+  .orangea:hover:after{
+    right:-15%;
+  }
+  .orangea1:hover:after{
+    right:-30%;
+  }
+  .limeul{
+    position:absolute;
+    left:150%;
+    top:0;
+    display:none;
+  }
+  .lemonul{
+    position:absolute;
+    left:150%;
+    top:0;
+    display:none;
+  }
+  .grapefruitul{
+    position:absolute;
+    left:150%;
+    top:0;
+    display:none;
+  }
+  .orangeul{
+    position:absolute;
+    left:150%;
+    top:0;
+    display:none;
+    
+  }
+  .liitem11:hover>.orangeul,
+  .liitem22:hover>.grapefruitul,
+  .liitem33:hover>.lemonul,
+  .liitem44:hover>.limeul{
+    display:block;
+  }
+  .liproductall{
+    overflow:hidden;
+  }
+  .liproductimg1,
+  .liproductimg2,
+  .liproductimg3,
+  .liproductimg4{
+    position:absolute;    
+    filter:grayscale(100%); 
+    transition:all 0.2s ease-in-out;
+    cursor: pointer;
+    width:250%;
+    bottom:-25%;
+    border:none;
+    overflow:hidden;
+   
+  }
+  .liproductimg1:hover,
+  .liproductimg2:hover,
+  .liproductimg3:hover,
+  .liproductimg4:hover{
+    filter:grayscale(0);
+  }
+  
+  .liproductimg1{
+    left:200%;
+    
+    
+  }
+  .liproductimg2{
+    left:450%;
+    
+  }
+  .liproductimg3{
+    left:700%;
+    
+  }
+  .liproductimg4{
+    left:950%;
+    
+  }
+  .menu-product-contain1,
+  .menu-product-contain2,
+  .menu-product-contain3,
+  .menu-product-contain4{
+    position:absolute;
+    width:100%;
+    
+    
+  }
+  .menu-product-contain1{
+  display:none;
+  }
+  .menu-product-contain2{
+    display:none;
+  }
+  .menu-product-contain3{
+    display:none;
+  }
+  .menu-product-contain4{
+    display:none;
+  }
+  .menu-product-item{
+    position:absolute;
+    width:200%;
+   
+    text-align:center;
+    line-height:35px;
+    font-size:14px;
+  }
+  .main-strong{
+    font-size:17px;
+    
+    
+  }
+  .menu-product-orange1{
+    left:400%;
+  }
+  .menu-product-grape1{
+    left:400%;
+    bottom:-250px;
+  }
+  .menu-product-lemon1{
+    left:400%;
+    bottom:-190px;
+  }
+  .menu-product-lime1{
+    left:400%;
+    bottom:-125px;
+  
+  }
+  .menu-product-orange2{
+    left:700%;
+    bottom:-328px;
+  }
+  .menu-product-grape2{
+    left:700%;
+    bottom:-250px;
+  }
+  .menu-product-lemon2{
+    left:700%;
+    bottom:-190px;
+  }
+  .menu-product-lime2{
+  left:700%;
+  bottom:-125px;
+  }
+  .menu-product-orange3{
+  left:1000%;
+  bottom:-328px;
+  }
+  .menu-product-grape3{
+    left:1000%;
+    bottom:-250px;
+  }
+  .menu-product-lemon3{
+    left:1000%;
+    bottom:-190px;
+  }
+  .menu-product-lime3{
+    left:1000%;
+    bottom:-125px;
+  }
+  
+  .menu-product-item>img{
+    width:100%;
+    
+  }
+  
+  .liitem:hover>.divstory{
+    display:block;
+  }
+  .divstory{
+    left:850%;
+    bottom:-85%;
+    position:absolute;
+    display:none;
+  }
+  .storyimga{  
+    width:140%;
+    border-radius: 20px;
+    overflow:hidden;
+    display:block;
+  }
+  
+  .spanborder1{
+    border-right:1px solid #d1d0d0;
+    position:absolute;
+    height:450px;
+    right:119%;
+    bottom:2.7%;
+    
+  }
+  .pstory{
+    width:350px;
+    
+    font-size:15pt;
+    font-weight:bold;
+    margin-left:25%;
+    line-height: 100px;
+    
+  }
+  .storyimg{
+    width:100%;
+    border-radius: 20px;
+    transition:all 0.3s ease-in-out;
+  }
+  .storyimg:hover{
+    transform: scale(1.1);
+  }
+  .fumjildiv{
+  display:none;
+  }
+  .liitem:hover>.fumjildiv{
+  display:block;
+  }
+  .fumjila,
+  .fumjila1{
+    display:block;
+    width:270%;
+    overflow:hidden;
+    border-radius: 25px;
+    position:absolute;
+    
+    left:900%;
+    bottom:-50%;
+  }
+  
+  
+  .fumjilimg:hover{
+    transform:scale(1.07);
+  }
+  .fumjila{
+    left:570%;  
+     
+  }
+  .fumjila:after,
+  .fumjila1:after{
+    display:none;
+  }
+  .fumjilimg{
+   width:100%;
+   border-radius: 25px;
+   transition:all 0.4s ease-in-out;
+   
+  }
+  .fumjilwrite{
+    position:absolute;
+    
+    width:510px;
+    line-height: 50px;
+    bottom:-80%;
+    left:685%;
+    font-weight:bold;
+    font-size:15pt;
+  }
+  
+  .spanborderfumjil{
+    border-right:1px solid #d1d0d0;
+    position:absolute;
+    height:450px;
+    left:500%;
+    bottom:-75%;  
+  }
+  
+  .oneonone-span-border{
+    border-right:1px solid #d1d0d0;
+    
+    position:absolute;
+    height:450px;
+    left:750%;
+    bottom:-140%; 
+  }
+  .oneonone-write{
+    position:absolute;
+    left:890%;
+    width:310px;
+    bottom:-135%;
+    font-size:15pt;
+    font-weight:bold;
+  }
+  .oneononea{
+    position:absolute;
+    left:850%;
+    width:300%;
+    bottom:-85%;
+    border-radius: 20px;
+    overflow:hidden;
+  }
+  .oneononeimg{
+   width:100%;
+   border-radius: 20px;
+   transition:all 0.4s ease-in-out;
+  }
+  .oneononea:hover>.oneononeimg{
+    transform: scale(1.05);
+  }
+  .oneononediv{
+  display:none;
+  }
+  .liitem:hover>.oneononediv{
+    display:block;
+  }
+  
+  .oneononea:after,
+  .oneononea1:after{
+    display:none;
+  }
+  .oneononeimg{
+    width:100%;
+  }
+  
+  
+  .icon {
+    float: right;
+    line-height: 90px;
+    cursor: pointer;
+    margin-top: 26px;
+  }
+  img.iconimg1,
+  img.iconimg2,
+  img.iconimg3 {
+    margin-right: 30px;
+    vertical-align: middle;
+    transition:all 0.3s ease-in-out;
+  }
+  .iconimg1:hover,
+  .iconimg2:hover,
+  .iconimg3:hover{
+    transform:scale(1.15);
+  }
+  img.iconimg1 {
+    height: 26px;
+    cursor:pointer;
+  }
+  img.iconimg2 {
+    height: 29px;
+  }
+  img.iconimg3 {
+    height: 26px;
+    margin-right:0;
+    
+    
+  }
+  .search-main {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 270px;
+    background-color: #fff;
+    
+    
+  }
+  .search-main:after{
+    content: "";
+    width:100%;
+    height:100vw;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:50;
+  }
+  
+  .search-input-p{
+    text-align:center;
+    margin:0 auto;
+    margin-top:20px;
+  }
+  #searchinput{
+    padding:15px;
+    padding-left:27px;
+    border-radius: 25px;
+    width:40%;
+    border:1px solid #bbbbbb;
+    
+  }
+  .search-close{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    position:absolute;
+    bottom:-50px;
+    outline:none;
+    border:none;
+    left:49.3%;
+    cursor: pointer;
+    z-index: 87;
+  }
+  .search-close-img{
+    position:absolute;
+    transform: rotate(45deg);
+    width:75%;
+    left: 13.4%;
+    top:13%;
+  }
+  .search-p-all{
+    width:30%;
+    margin:0 auto;
+    position:absolute;
+    top:70%;
+    left:35.5%;
+    
+  }
+  .search-p-all p{
+    float:left; 
+    width:22.75%;
+    font-size: 13px;
+    border:1px solid rgb(170, 170, 170);
+    text-align: center;
+    border-radius: 25px;
+    line-height: 35px;
+    color:rgb(136, 136, 136);
+    margin-right:3%;
+  }
+  .search-p-all p:last-child{
+    margin-right:0;
+  }
+  
+  .search-p-item1{
+    position:absolute;
+    top:39%;
+    left:48.1%;
+    color:rgb(0, 0, 0);
+    font-weight:bold;
+    font-size:18px;
+  }
+  .input-search-item-img{
+    position:absolute;
+    right:31.5%;
+    width:1.1%;
+    top:20.5%;
+  }
+  
+  
+  
+  .divevent{
+    position:absolute;
+    right:-690%;
+    bottom:-110%;  
+  }
+  .spaneventborder{
+    position:absolute;
+    height:450px;
+    border-right:1px solid #d1d0d0;
+    left:-3.5%;
+    bottom:-22%;
+  }
+  .introimgdiv{
+    position:absolute;  
+    right:-850%;
+    width:100%;
+    bottom:-70%;
+    height:400px; 
+    
+  }
+  .introulcategory1,
+  .introulcategory2,
+  .introulcategory3,
+  .introulcategory4
+  {
+  
+    position:absolute;
+    top:0;
+    left:150%;
+  }
+  .introacategory{
+    color:#000;
+    width:120px;
+    display:block;
+    
+  }
+  .introacategory:hover{
+    font-weight:bold;
+  }
+  .introacategory1,
+  .introacategory2{
+    width:150px;
+  }
+  .introacategory1:hover:after{
+    right:-15%;
+  }
+  .introacategorysubway{
+    width:150px;
+  }
+  .introacategorysubway:hover:after{
+    right:-10%;
+  }
+  .introacategory2:hover:after{
+  right:-10%;
+  }
+  .introulcategory1>.introlicategory>a:hover:after{
+    right:-10%;
+  
+  }
+  
+  .introimg111{
+    width:100%;
+    transition:all 0.4s ease-in-out;
+  }
+  .introimg111:hover{
+    transform: scale(1.1);
+  }
+  .introimga11{
+    overflow:hidden;
+    width:370%;
+    display:block;
+    border-radius: 25px;
+    
+    
+  }
+  .spanborder{
+    border-right:1px solid #d1d0d0;
+    position:absolute;
+    height:450px;
+    bottom:-4.5%;
+    right:150%;
+  }
+  .introwrite{
+    width:490px;
+    font-size:15pt;
+    font-weight:bold;
+    text-align:center;  
+    margin-top:40%;  
+    line-height: 0;  
+  }
+  .lieventimg1{
+    width:100%;
+    transition:all 0.3s ease-in-out;
+    
+  
+  }
+  .lieventimg1:hover{
+    transform:scale(1.05);
+  }
+  .lieventa1,
+  .lieventa2,
+  .lieventa3{
+    display:block;
+    float:left;
+    width:16%;
+    overflow:hidden;
+  
+  }
+  .lieventa1{
+    margin-right:2%;
+    
+  }
+  .lieventa2{
+    margin-right:2%;
+  }
+  .spanrecipeborder{
+    border-right:1px solid #d1d0d0;
+    position:absolute;
+    height:450px;
+    left:800%;
+    bottom:-620%;
+  }
+  /* .recipeaa1:hover>.recipehoverimg1{
+    
+    animation-name: leftmove ;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+  @keyframes leftmove{
+    0%{
+    opacity: 1;
+    }
+    100%{
+      left:950%;
+      opacity: 1;
+    }
+  } */
+  .recipehoverimg1{
+    position:absolute;
+    left:950%;
+    bottom:-420%; 
+    transition:all .4s ease-in-out;
+  }
+  .recipehoverimg1:hover{
+    transform: scale(1.04);
+  }
+  .recipehoverimg2{
+    left:980%;
+  }
+  .recipehoverimg3{
+    left:965%;
+  }
+  /* .recipeaa1:hover>.recipehoverp1{
+    
+    animation-name: leftmove1 ;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+  @keyframes leftmove1{
+    0%{
+    opacity: 1;
+    }
+    100%{
+      left:1050%;
+      opacity: 1;
+    }
+  }*/
+  
+  .recipehoverp1{ 
+    position:absolute;
+    font-size:15pt;
+    font-weight:bold;
+    left:1040%;
+    color:#000;
+    width:120px;
+    bottom:-600%;
+    transition:all .5s ease-in-out;
+  }
+  
+  .recipediv22_2,
+  .recipediv22,
+  .recipediv22_1,
+  .recipediv22_3
+  {
+    display:none;
+  }
+  .recipeaa1:hover>.recipediv22,
+  .recipeaa2:hover>.recipediv22_1,
+  .recipeaa3:hover>.recipediv22_2,
+  .recipeaa4:hover>.recipediv22_3{
+    display:block;
+  }
+  
+  
+  
+  .recipeaa1:after,
+  .recipeaa2:after,
+  .recipeaa3:after,
+  .recipeaa4:after{
+    display:none;
+  
+  }
+  .recipeimg_1,
+  .recipeimg_2,
+  .recipeimg_3,
+  .recipeimg_4{
+    position:absolute;
+    
+  }
+  
+  
+  .recipeimg_1{
+    width:100%;
+  left:250%;
+  }
+  .recipeimg_2{
+    width:100%;
+    
+    left:250%;
+    bottom:-450%;
+  }
+  .recipeimg_3{
+    width:100%;
+    left:400%;
+  }
+  .recipeimg_4{
+   left:400%;
+   width:100%;
+   bottom:-450%;
+  }
+  .muna1{
+    display:block;
+    position:absolute;
+    left:800%;
+    width:400%; 
+    bottom:-85%;
+    overflow:hidden;
+  }
+  .muna1:hover>.munimg1{
+    transform: scale(1.05);
+  }
+  .munp1{
+    position:absolute;
+    left:875%;
+    bottom:-135%;
+    width:400px;
+    font-size:15pt;
+    font-weight:bold;
+  }
+  .munimg1{
+    border-radius:25px;
+    width:100%;
+    transition:all 0.4s ease-in-out;
+  }
+  .munspanborder{
+    position:absolute;
+    height:450px;
+    left:750%;
+    bottom:-140%;
+    border-right:1px solid #d1d0d0;
+  }
+  
+  .muna1:after{
+    display:none;
+  }
+  .recipeacategory{
+    position:absolute;
+    left:100%;
+    top:0;
+    width:200px;
+    color:#000;
+    display:none;
+  }
+  .directiondiv{
+    
+   
+  
+  }
+  .directiona{
+    width:375%;
+    display:block;
+    position:absolute;
+    left:850%;
+    bottom:-50%;
+    border-radius: 25px;
+    overflow:hidden;
+  }
+  .directiona:hover>.directionimg{
+    transform: scale(1.06);
+  }
+  .directionp{
+    width:400px;
+    position:absolute;
+    left:900%;
+    bottom:-85%;
+   
+    font-size:20px;
+    font-weight:bold;
+  }
+  .directionimg{
+    width:100%;
+    border-radius: 25px;
+    transition:all 0.4s ease-in-out;
+  }
+  .directionspan{
+    position:absolute;
+    height:450px;
+    left:790%;
+    bottom:-80%;
+    border-right:1px solid #d1d0d0;
+  }
+  
+  .directiona:after{
+  display:none;
+  }
+  .recipeacategory:hover{
+    font-weight:bold;
+  }
+  .cal-border{
+    position:absolute;
+    height:450px;
+    left:750%;
+    bottom:-140%;
+    border-right:1px solid #d1d0d0;
+  }
+  .cal-write{
+    position:absolute;
+    left:850%;
+    width:450px;
+    bottom:-135%;
+    font-size:15pt;
+    font-weight:bold;
+  }
+  .cal-a{
+    position:absolute;
+    width:350%;
+    left:825%;
+    bottom:-90%;
+    border-radius: 20px;
+    overflow:hidden;
+  }
+  
+  .cal-a:after{
+    display:none;
+  }
+  .cal-img{
+  width:100%;
+  border-radius: 20px;
+  transition:all 0.4s ease-in-out;
+  }
+  .cal-a:hover>.cal-img{
+    transform: scale(1.05);
+  }
+  
+  .amain1:hover:before,
+  .amain2:hover:before,
+  .amain3:hover:before,
+  .amain4:hover:before,
+  .amain5:hover:before {
+    width: 65%;
+  }
+  header nav > ul > li > a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.6s ease;
+  }
+  .amain1:after {
+    content: "Sunkist";
+  }
+  .amain1:hover:after {
+    content: "썬키스트";
+  }
+  .amain2:after {
+    content: "Menu";
+  }
+  .amain2:hover:after {
+    content: "메뉴";
+  }
+  .amain3:after {
+    content: "Recipe";
+  }
+  .amain3:hover:after {
+    content: "레시피";
+  }
+  .amain4:after {
+    content: "Event";
+  }
+  .amain4:hover:after {
+    content: "이벤트";
+  }
+  .amain5:after {
+    content: "Service";
+  }
+  .amain5:hover:after {
+    content: "지원";
+  }
+  /* 메뉴 끝---------------------- */
+      .footer {
+        margin-top: 10%;
+        background: #2c2a29;
+        padding: 60px 0;
+        overflow: hidden;
+        height: 400px;
+      }
+
+      .footer1 {
+        overflow: hidden;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .footerimg {
+        vertical-align: top;
+        width: 13%;
+        float: left;
+      }
+
+      .footersns {
+        float: right;
+        margin-top: 45px;
+      }
+
+      img.snsimg {
+        height: 26px;
+        vertical-align: middle;
+        margin-right: 13px;
+      }
+
+      .spanorange {
+        color: orange;
+      }
+
+      a.a1 {
+        color: #fff;
+        margin: 15px;
+      }
+
+      .footerwrite {
+        color: #fff;
+        overflow: hidden;
+        font-size: 11pt;
+        margin-left: 4%;
+        float: left;
+      }
+
+      .footer2 {
+        overflow: hidden;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .footerhr {
+        width: 70%;
+        margin: 40px auto;
+      }
+      .footerin2 {
+        color: #fff;
+        line-height: 25px;
+        float: left;
+      }
+
+      .lohei {
+        float: right;
+        line-height: 35px;
+        color: #fff;
+      }
+      a.lo1 {
+        color: #fff;
+      }
+
+      .logoimg {
+        text-align: center;
+        margin: 0 auto;
+        margin: 200px 0;
+      }
+
+      .divmain,
+      .divmainmom,
+      .divmainmom2,
+      .divmainmom3,
+      .divmainmom4 {
+        width: 40%;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .qmain {
+        text-align: center;
+        margin-top:15%;
+        margin-bottom:10%;
+      }
+
+      .q1 {
+        float: left;
+
+        cursor: pointer;
+      }
+      .p1 {
+        float: left;
+        margin-top: 13px;
+        cursor: pointer;
+        margin-left: 8px;
+      }
+
+      .imgimg {
+        float: right;
+        width: 4%;
+        margin-top: 10px;
+
+        cursor: pointer;
+      }
+
+      .q2 {
+        float: left;
+      }
+      .p2 {
+        float: left;
+        margin-top: 13px;
+        margin-left: 10px;
+      }
+      .p3 {
+        float: left;
+        margin-left: 10px;
+      }
+      .p4 {
+        float: left;
+        margin-left: 10px;
+      }
+
+      .divmain2,
+      .divmain3,
+      .divmain4,
+      .divmain5,
+      .divmain6 {
+        clear: both;
+        overflow: hidden;
+        height: 0px;
+        transition-duration: 0.7s;
+        background-color: #f4f4f2;
+        margin-left: 3px;
+      }
+
+      #id1,
+      #id2,
+      #id3,
+      #id4,
+      #id5 {
+        visibility: hidden;
+      }
+      #id1:checked ~ .divmain2 {
+        height: 110px;
+        padding: 30px 0;
+      }
+      #id2:checked ~ .divmain3 {
+        height: 110px;
+        padding: 30px 0;
+      }
+      #id3:checked ~ .divmain4 {
+        height: 110px;
+        padding: 30px 0;
+      }
+      #id4:checked ~ .divmain5 {
+        height: 110px;
+        padding: 30px 0;
+      }
+      #id5:checked ~ .divmain6 {
+        height: 110px;
+        padding: 30px 0;
+      }
+
+      #id1:checked ~ label[for="id1"] img,
+      #id2:checked ~ label[for="id2"] img,
+      #id3:checked ~ label[for="id3"] img,
+      #id4:checked ~ label[for="id4"] img,
+      #id5:checked ~ label[for="id5"] img {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 메뉴시작-------------->
+    <header>
+      <div class="headermain">
+        <a href="index.html"
+          ><img src="img/sunkist6.png" alt="lll" class="headerlogo"
+        /></a>
+        <nav>
+          <ul class="ulmain">
+            <li class="limain">
+              <a href="#" class="amain1"></a>
+              <ul class="ulmainitem">
+                <li class="limainitem">
+                  <ul class="ulitem">
+                    <li class="liitem1">
+                      <a href="#" class="sunkistitem">회사소개 </a>
+                      <ul class="introulcategory1">
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">썬키스트 소개 </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">기업 정보 </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">앞으로의 발전 </a>
+                        </li>
+                      </ul>
+                      <div class="introimgdiv">
+                        <a href="#" class="introimga11"
+                          ><img
+                            src="img/Layer 3 (merged).png"
+                            alt="sfsdf"
+                            class="introimg111"
+                          />
+                        </a>
+                        <p class="introwrite">썬키스트는 어떤 기업일까요?</p>
+                        <span class="spanborder"></span>
+                      </div>
+                    </li>
+
+                    <li class="liitem2">
+                      <a href="#" class="sunkistitem">스토리</a>
+                      <ul class="introulcategory2">
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">역사 </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">지속 가능성 </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory introacategory2"
+                            >썬키스트 협동조합
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="divstory">
+                        <a href="#" class="storyimga">
+                          <img
+                            src="img/story.png"
+                            class="storyimg"
+                            alt="ssss"
+                          />
+                        </a>
+                        <p class="pstory">
+                          썬키스트의 이야기를 함께 들어보세요.
+                        </p>
+                        <span class="spanborder1"></span>
+                      </div>
+                    </li>
+                    <li class="liitem3">
+                      <a href="#" class="sunkistitem">품질관리</a>
+                      <ul class="introulcategory3">
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory introacategory1"
+                            >썬키스트 재배 과정
+                          </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory introacategory1"
+                            >블랙 라벨 보러가기
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="fumjildiv">
+                        <a href="#" class="fumjila">
+                          <img
+                            src="img/pumjilimg1.png"
+                            alt="asd32"
+                            class="fumjilimg"
+                          />
+                        </a>
+                        <a href="#" class="fumjila1">
+                          <img
+                            src="img/pumjil1.png"
+                            alt="asd32"
+                            class="fumjilimg"
+                          />
+                        </a>
+                        <p class="fumjilwrite">
+                          썬키스트의 엄격한 관리 속에서 나오는 품질을
+                          확인해보세요.
+                        </p>
+                        <span class="spanborderfumjil"></span>
+                      </div>
+                    </li>
+                    <li class="liitem4">
+                      <a href="#" class="sunkistitem">오시는 길</a>
+                      <ul class="introulcategory4">
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory"
+                            >버스로 오시는 길
+                          </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a
+                            href="#"
+                            class="introacategory introacategorysubway"
+                            >지하철로 오시는 길
+                          </a>
+                        </li>
+                        <li class="introlicategory">
+                          <a href="#" class="introacategory">차로 오시는 길 </a>
+                        </li>
+                      </ul>
+                      <div class="directiondiv">
+                        <a href="#" class="directiona">
+                          <img
+                            src="img/fall-1010544_1920.jpg"
+                            class="directionimg"
+                          />
+                        </a>
+                        <p class="directionp">
+                          썬키스트가 궁금하시다면 직접 방문해보세요.
+                        </p>
+                        <span class="directionspan"> </span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="limain">
+              <a href="#" class="amain2"></a>
+
+              <ul class="ulmainitem">
+                <li class="limainitem">
+                  <ul class="ulitem">
+                    <li class="liitem11">
+                      <a href="#" class="sunkistitem">오렌지</a>
+                      <ul class="orangeul">
+                        <li class="orangeli">
+                          <a href="#" class="orangea"> 네이블 오렌지 </a>
+                        </li>
+                        <li class="orangeli">
+                          <a href="#" class="orangea">발렌시아 오렌지</a>
+                        </li>
+                        <li class="orangeli">
+                          <a href="#" class="orangea">카라카라 오렌지</a>
+                        </li>
+                        <li class="orangeli">
+                          <a href="#" class="orangea">블러드 오렌지</a>
+                        </li>
+                      </ul>
+                      <ul class="menu-product-contain1">
+                        <li class="menu-product-item menu-product-orange1">
+                          <img src="img/productorangeimg1.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">카라카라 오렌지</strong><br>
+                          핑크빛이 감도는 오렌지
+                        </li>
+                        <li class="menu-product-item menu-product-orange2">
+                          <img src="img/productorangeimg2.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">블루 오렌지</strong><br>
+                          시큼하고 단 맛이 일품인 오렌지
+                        </li>
+                        <li class="menu-product-item menu-product-orange3">
+                          <img src="img/productorangeimg3.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">네이블 오렌지</strong><br>오리지널만의 매력이 있는 오렌지
+                        </li>
+                      </ul>
+                        
+                    </li>
+                    <li class="liitem22">
+                      <a href="#" class="sunkistitem">자몽</a>
+                      <ul class="grapefruitul">
+                        <li class="grapefruitli">
+                          <a href="#" class="orangea">핑크 자몽</a>
+                        </li>
+                        <li class="grapefruitli">
+                          <a href="#" class="orangea">레드 자몽</a>
+                        </li>
+                        <li class="grapefruitli">
+                          <a href="#" class="orangea">화이트 자몽</a>
+                        </li>
+                        <li class="grapefruitli">
+                          <a href="#" class="orangea orangea1"
+                            >오로 블랑코 자몽</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="menu-product-contain2">
+                        <li class="menu-product-item menu-product-grape1">
+                          <img src="img/productgrapeimg1.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">레드 자몽</strong><br>언제든지 먹을 수 있는 대중적인 자몽
+
+                        </li>
+                        <li class="menu-product-item menu-product-grape2">
+                          <img src="img/productgrapeimg2.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">핑크 자몽</strong><br>색깔이 이쁘며 주스에 많이 쓰이는 자몽
+                        </li>
+                        <li class="menu-product-item menu-product-grape3">
+                          <img src="img/productgrapeimg3.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">오로 블랑코 자몽</strong><br>요리에 보통 쓰이고 짭짤한 맛이 강한 자몽
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="liitem33">
+                      <a href="#" class="sunkistitem">레몬</a>
+                      <ul class="lemonul">
+                        <li class="lemonli">
+                          <a href="#" class="orangea">리스본 레몬</a>
+                        </li>
+                        <li class="lemonli">
+                          <a href="#" class="orangea">메이어 레몬</a>
+                        </li>
+                        <li class="lemonli">
+                          <a href="#" class="orangea">화이트 레몬</a>
+                        </li>
+                        <li class="lemonli">
+                          <a href="#" class="orangea">유레카 레몬</a>
+                        </li>
+                      </ul>
+                      <ul class="menu-product-contain3">
+                        <li class="menu-product-item menu-product-lemon1">
+                          <img src="img/productlemonimg1.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">리스본 레몬</strong><br>먹기엔 조금 시큼하지만 요리엔 최고!
+                          
+                        </li>
+                        <li class="menu-product-item menu-product-lemon2">
+                          <img src="img/prodproductlemonimg2.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">그린 레몬</strong><br>색깔이 독특하고 맛도 즐길 수 있는 레몬
+                        </li>
+                        <li class="menu-product-item menu-product-lemon3">
+                          <img src="img/productlemonimg3.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">메이어 레몬</strong><br>특정 요리에 꼭 필요한 레몬
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="liitem44">
+                      <a href="#" class="sunkistitem">라임</a>
+                      <ul class="limeul">
+                        <li class="limeli">
+                          <a href="#" class="orangea">페르시안 라임</a>
+                        </li>
+                        <li class="limeli">
+                          <a href="#" class="orangea">키 라임</a>
+                        </li>
+                        <li class="limeli">
+                          <a href="#" class="orangea">핑거 라임</a>
+                        </li>
+                      </ul>
+                      <ul class="menu-product-contain4">
+                        <li class="menu-product-item menu-product-lime1">
+                          <img src="img/productorangelime1.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">페르시안 라임</strong><br>제일 대중적이고 요리에 많이 쓰이는 라임
+                        </li>
+                        <li class="menu-product-item menu-product-lime2">
+                          <img src="img/productlimeimg2.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">키 라임</strong><br>향이 강해서 맛을 잡아주기 좋은 라임
+                        </li>
+                        <li class="menu-product-item menu-product-lime3">
+                          <img src="img/productlimeimg3.png" alt="1234123" class="menu-product-img"> 
+                          <strong class="main-strong">핑거 라임</strong><br>독특한 모양으로 맛도 독특합니다
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="liproductall">
+                      <img
+                        src="img/orangeproduct.png"
+                        alt="sd"
+                        class="liproductimg1"
+                      />
+                      <img
+                        src="img/limeproduct.png"
+                        alt="sd"
+                        class="liproductimg2"
+                      />
+                      <img
+                        src="img/lemonproduct.png"
+                        alt="sd"
+                        class="liproductimg3"
+                      />
+                      <img
+                        src="img/grapefruitproduct.png"
+                        alt="sd"
+                        class="liproductimg4"
+                      />
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="limain">
+              <a href="#" class="amain3"></a>
+              <ul class="ulmainitem">
+                <li class="limainitem">
+                  <ul class="ulitem">
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem">레시피</a>
+                      <ul class="recipeulcategory">
+                        <li class="recipelicategory">
+                          <a href="#" class="recipeacategory">
+                            Sunkist Recipe
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="recipediv">
+                        <a href="#" class="recipeaa1">
+                          <img
+                            src="img/oo1.png"
+                            alt="w3e"
+                            class="recipeimg_1"
+                          />
+                          <div class="recipediv22">
+                            <img
+                              src="img/recipehoverimg1.png"
+                              alt="13141"
+                              class="recipehoverimg1"
+                            />
+                            <p class="recipehoverp1">오렌지 레시피</p>
+                          </div>
+                        </a>
+                        <a href="#" class="recipeaa2">
+                          <img
+                            src="img/ll1.png"
+                            alt="w3e"
+                            class="recipeimg_2"
+                          />
+                          <div class="recipediv22_1">
+                            <img
+                              src="img/limeimg111.png"
+                              alt="13141"
+                              class="recipehoverimg1 recipehoverimg2"
+                            />
+                            <p class="recipehoverp1">라임 레시피</p>
+                          </div>
+                        </a>
+                        <a href="#" class="recipeaa3">
+                          <img
+                            src="img/mm1.png"
+                            alt="w3e"
+                            class="recipeimg_3"
+                          />
+                          <div class="recipediv22_2">
+                            <img
+                              src="img/lemon123123.png"
+                              alt="13141"
+                              class="recipehoverimg1"
+                            />
+                            <p class="recipehoverp1">레몬 레시피</p>
+                          </div>
+                        </a>
+                        <a href="#" class="recipeaa4">
+                          <img
+                            src="img/gg1.png"
+                            alt="w3e"
+                            class="recipeimg_4"
+                          />
+                          <div class="recipediv22_3">
+                            <img
+                              src="img/grapefruit123123.png"
+                              alt="dsaf"
+                              class="recipehoverimg1 recipehoverimg3"
+                            />
+                            <p class="recipehoverp1">자몽 레시피</p>
+                          </div>
+                        </a>
+                      </div>
+                      <span class="spanrecipeborder"></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="limain">
+              <a href="#" class="amain4"></a>
+              <ul class="ulmainitem">
+                <li class="limainitem">
+                  <ul class="ulitem">
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem sunkistitem1"
+                        >마스코트 이름을 맞춰라!</a
+                      >
+                    </li>
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem sunkistitem111"
+                        >재활용 어디까지 알고 계세요?</a
+                      >
+                    </li>
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem sunkistitem1"
+                        >과즙뿜뿜 과즙빙수</a
+                      >
+                    </li>
+                    <div class="divevent">
+                      <a href="#" class="lieventa1"
+                        ><img
+                          src="img/eventbanner2.jpg"
+                          alt="sdf"
+                          class="lieventimg1"
+                        />
+                      </a>
+                      <a href="#" class="lieventa2">
+                        <img
+                          src="img/evertbanner1.jpg"
+                          alt="sdf"
+                          class="lieventimg1"
+                        />
+                      </a>
+                      <a href="#" class="lieventa3">
+                        <img
+                          src="img/eventbanner3.jpg"
+                          alt="sdf"
+                          class="lieventimg1"
+                        />
+                      </a>
+                      <span class="spaneventborder"></span>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="limain">
+              <a href="#" class="amain5"></a>
+              <ul class="ulmainitem">
+                <li class="limainitem">
+                  <ul class="ulitem">
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem33">1:1 문의</a>
+                      <div class="mundiv">
+                        <a href="#" class="muna1">
+                          <img
+                            src="img/munimg1.png"
+                            alt="a23"
+                            class="munimg1"
+                          />
+                        </a>
+                        <p class="munp1">
+                          불편하신 점이 있으면 무엇이든 물어보세요.
+                        </p>
+                        <span class="munspanborder"></span>
+                      </div>
+                    </li>
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem">Q&A</a>
+                      <div class="oneononediv">
+                        <a href="#" class="oneononea">  
+                          <img src="img/aaron-burden-xG8IQMqMITM-unsplash.jpg" alt="asdf2" class="oneononeimg" />
+                        </a>
+                        <p class="oneonone-write">
+                          궁금했던 것들을 모두 알려드립니다!
+                        </p>
+                        <span class="oneonone-span-border"></span>
+                      </div>
+                    </li>
+                    <li class="liitem">
+                      <a href="#" class="sunkistitem-gong">공지사항</a>
+                      <div class="cal-main">
+                        <a href="#" class="cal-a"><img src="img/estee-janssens-zni0zgb3bkQ-unsplash.jpg" alt="342" class="cal-img">
+                        </a>
+                        <p class="cal-write">
+                          썬키스트의 공지사항을 실시간으로 확인해보세요.
+                        </p>
+                        <span class="cal-border">
+
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="icon">
+          <img src="img/Layer 4.png" class="iconimg1" />
+          <div class="search-main">
+            <p class="search-input-p">
+            <input type="text" id="searchinput" placeholder="검색어를 입력해주세요">
+            <img src="img/Layer 4.png" alt="w34324" class="input-search-item-img">
+          </p>
+         
+          <p class="search-p-item1">추천 검색어</p>
+          <div class="search-p-all">
+          <p class="search-p-item2">#카라카라 오렌지</p>
+          <p class="search-p-item3">#페르시안 라임</p>
+          <p class="search-p-item4">#메이어 레몬</p>
+          <p class="search-p-item5">#핑크 자몽</p>
+        </div>
+            <button class="search-close">
+            <img src="img/premium-icon-add-2723640.png" alt="3324" class="search-close-img">
+            </button>
+            
+            </div>
+
+          <img src="img/Layer 21.png" class="iconimg2" />
+          <a href="login.html" class="icon-a-item3">
+            <img src="img/Layer 3.png" class="iconimg3" />
+            <div class="iconhoverwrite-main">
+              <p class="iconhoverwrite-item">
+                <a href="login.html">로그인</a>
+              </p>
+              <p class="iconhoverwrite-item">
+                <a href="heiwongaip.html">회원가입</a>
+              </p>
+              <p class="iconhoverwrite-item">
+                <a href="#">1:1 문의</a>
+              </p>
+              <p class="iconhoverwrite-item">
+                <a href="#">주문/배송조회</a>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- 메뉴 끝-->
+    <h1 class="qmain">Q&A</h1>
+
+    <div class="divmain">
+      <input type="checkbox" id="id1" />
+
+      <label for="id1">
+        <h1 class="q1">Q</h1>
+        <p class="p1">배송은 보통 며칠이 걸리나요?</p>
+        <img
+          src="img/free-icon-down-arrow-748063.png"
+          alt="ss"
+          class="imgimg"
+        />
+      </label>
+
+      <div class="divmain2">
+        <h1 class="q2">A</h1>
+        <p class="p2">평균 3~4일이 소요 됩니다.</p>
+      </div>
+    </div>
+
+    <div class="divmainmom">
+      <input type="checkbox" id="id2" />
+
+      <label for="id2">
+        <h1 class="q1">Q</h1>
+        <p class="p1">과일은 얼마나 신선한가요?</p>
+        <img
+          src="img/free-icon-down-arrow-748063.png"
+          alt="ss"
+          class="imgimg"
+        />
+      </label>
+
+      <div class="divmain3">
+        <h1 class="q2">A</h1>
+        <p class="p2">썬키스트는 항상 갓 재배한 과일들만 판매하고 있습니다.</p>
+      </div>
+    </div>
+    <div class="divmainmom2">
+      <input type="checkbox" id="id3" />
+
+      <label for="id3">
+        <h1 class="q1">Q</h1>
+        <p class="p1">교환,환불은 어떻게 진행하나요?</p>
+        <img
+          src="img/free-icon-down-arrow-748063.png"
+          alt="ss"
+          class="imgimg"
+        />
+      </label>
+
+      <div class="divmain4">
+        <h1 class="q2">A</h1>
+        <p class="p3">
+          교환,환불은 배송이 오기 전이나 배송을 받으신 후 배송취소를 누르시거나
+          교환을 누르시면<br />
+          택배사에서 다시 회수해 갑니다.
+        </p>
+      </div>
+    </div>
+    <div class="divmainmom3">
+      <input type="checkbox" id="id4" />
+
+      <label for="id4">
+        <h1 class="q1">Q</h1>
+        <p class="p1">ID와 비밀번호를 잊어버렸어요</p>
+        <img
+          src="img/free-icon-down-arrow-748063.png"
+          alt="ss"
+          class="imgimg"
+        />
+      </label>
+
+      <div class="divmain5">
+        <h1 class="q2">A</h1>
+        <p class="p4">
+          메인 페이지 오른쪽 상단에 마이 페이지 들어가신 후<br />
+          아이디, 비밀번호 찾기 눌러서 찾을 수 있습니다.
+        </p>
+      </div>
+    </div>
+    <div class="divmainmom4">
+      <input type="checkbox" id="id5" />
+
+      <label for="id5">
+        <h1 class="q1">Q</h1>
+        <p class="p1">비회원도 주문이 가능한가요?</p>
+        <img
+          src="img/free-icon-down-arrow-748063.png"
+          alt="ss"
+          class="imgimg"
+        />
+      </label>
+
+      <div class="divmain6">
+        <h1 class="q2">A</h1>
+        <p class="p4">
+          1회 주문을 하실 경우 비회원으로 주문이 가능하나<br />
+          간단한 절차로 회원가입이 가능하니 회원가입 후 이용해주시면
+          감사하겠습니다.
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer1">
+        <div class="footer11in">
+          <a href="#">
+            <img src="img/Layer 295 copy 2.png" class="footerimg"
+          /></a>
+          <div class="footerwrite">
+            <a href="#" class="a1">회사소개</a>
+            <a href="#" class="a1">이용약관</a>
+            <a href="#" class="a1">채용안내</a>
+            <a href="#" class="a1">사이트맵</a><br /><br />
+            <a href="#" class="a1"
+              ><span class="spanorange">개인정보처리방침</span></a
+            >
+            <a href="#" class="a1">영상정보처리기기 운영 관리방침 </a>
+          </div>
+          <div class="lohei">
+            <a href="#" class="lo1">로그인</a><br /><a href="#" class="lo1"
+              >회원가입</a
+            ><br /><a href="#" class="lo1">고객센터</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footerhr" />
+      <div class="footer2">
+        <div class="footerin2">
+          경기도 의정부시 낙양동 민락라디언트캐슬 12단지 1202동 706호 (용민로
+          419번지) 11815 <br />
+          사업자 전화번호 : 010-6219-1635 썬키스트(주) 대표이사 강동구<br />
+          COPYRIGHT Ⓒ 2022 SUNKIST COMPANY. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footersns">
+          <a href="#"
+            ><img src="img/Layer 222.png" alt="sns" class="snsimg"
+          /></a>
+          <a href="#"><img src="img/Layer 1.png" alt="sns" class="snsimg" /></a>
+          <a href="#"><img src="img/blog.png" alt="sns" class="snsimg" /></a>
+          <a href="#"
+            ><img src="img/Layer 140 copy 2.png" alt="sns" class="snsimg"
+          /></a>
+          <a href="#">
+            <img src="img/Layer 522.png" alt="sns" class="snsimg"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

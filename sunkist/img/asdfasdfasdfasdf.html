@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>index</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+
+    <!-- 자바스크립트 사용할때 꼭 필요한 코드 -->
+
+    <script>
+      $(function () {
+        $(".mm").on("click", function () {
+          $("#sublist").toggle("slow");
+        });
+      });
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "noto sans kr", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .aa {
+        display: block;
+        line-height: 40px;
+        color: #fff;
+        background-color: navy;
+        text-align: center;
+      }
+
+      img {
+        vertical-align: bottom;
+        border: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+      .ulmain {
+        width: 100%;
+        background-color: green;
+        padding: 0 10%;
+        position: relative;
+        height: 40px;
+      }
+      .limain {
+        width: calc(100% / 5);
+        float: left;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        line-height: 150px;
+        background-color: pink;
+      }
+      #sublist {
+        display: none;
+      }
+      .sub1main {
+        position: absolute;
+        width: 80%;
+        height: 500px;
+        left: 10%;
+        overflow: hidden;
+        top: 40px;
+        margin: 0 auto;
+        background: skyblue;
+      }
+      .sub1 {
+        width: 20%;
+        float: left;
+        padding-left: 90px;
+      }
+      .aaa {
+        display: block;
+        line-height: 100px;
+        color: rgb(192, 79, 214);
+        text-align: left;
+      }
+      .aaa:hover {
+        color: #fff;
+      }
+      .mm {
+        display: block;
+        line-height: 40px;
+        color: #fff;
+        background-color: navy;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <h1>썬키스트</h1>
+      <ul class="ulmain">
+        <li class="limain">
+          <a href="#" class="aa">썬키스트</a>
+        </li>
+        <li class="limain">
+          <a href="#" class="aa">썬키스트</a>
+        </li>
+        <li class="limain">
+          <a href="#" class="aa">썬키스트</a>
+        </li>
+        <li class="limain">
+          <a href="#" class="aa">썬키스트</a>
+        </li>
+
+        <li class="limain">
+          <a href="#" class="mm">마이너스플러스 </a>
+          <div id="sublist">
+            <ul class="sub1main">
+              <li class="asdfasdfd">
+                <ul class="sub1">
+                  <li class="li1"><a href="#" class="aaa">소개했을까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개할까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개해요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개했음</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개소개</a></li>
+                </ul>
+                <ul class="sub1">
+                  <li class="li1"><a href="#" class="aaa">소개했을까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개할까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개해요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개했음</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개소개</a></li>
+                </ul>
+                <ul class="sub1">
+                  <li class="li1"><a href="#" class="aaa">소개했을까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개할까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개해요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개했음</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개소개</a></li>
+                </ul>
+                <ul class="sub1">
+                  <li class="li1"><a href="#" class="aaa">소개했을까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개할까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개해요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개했음</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개소개</a></li>
+                </ul>
+                <ul class="sub1">
+                  <li class="li1"><a href="#" class="aaa">소개했을까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개할까요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개해요</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개했음</a></li>
+                  <li class="li1"><a href="#" class="aaa">소개소개</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
